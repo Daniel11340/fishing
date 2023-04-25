@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-hant" xml:lang="zh-hant">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://6000-fisc.cdn.hinet.net/Content/img/favicon.ico">
+  <link rel="stylesheet" href="https://6000-fisc.cdn.hinet.net/Content/css/reset.css">
+  <link rel="stylesheet" href="https://6000-fisc.cdn.hinet.net/Content/css/style.css">
+  <title>財政部-全民共享普發現金</title>
+</head>
+<body>
+<<main>
+  <section id="content" tabindex="-1" class="contentLayout">
+    <a accesskey="C" class="guidePoint" href="javascript:void(0);" aria-label="中央內容區塊">:::</a>
+    <div class="indexLeft textCenter">
+      <h1>
+        <img alt="全民共享普發現金" src="https://6000-fisc.cdn.hinet.net/Content/img/cash.png">
+      </h1>
+    </div>
+    <div class="indexRight textCenter formColumn">
+      <script src="https://6000-fisc.cdn.hinet.net/Content/js/jquery.min.js"></script>
+
+      <div class="subTitle">
+  <h2>資料登記</h2>
+  <p>請備妥發放對象之健保卡號 與 本人/代領人之金融機構帳號</p>
+</div>
+<form action="/Register/Index" id="Register" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="fdryKNt_PTPzqMWs5V41LJ8trB4F8-8e8WVxlG-3bDqZg7TcaALVStJ4qeOeCa0GHdlHQHdggEAY5CFdweyHpxKAgAiEg6y8GrHrHsV2XKg1" />    <div class="hr">
+  <fieldset>
+    <legend class="visually-hidden">本人/代領人資訊</legend>
+    <div class="item">
+      <label for="RegisterBE_ParentId">本人/代領人身分證字號或居留證統一證號</label>
+      <div>
+        <input MaxLength="10" aria-label="本人/代領人身分證字號或居留證統一證號" id="RegisterBE_ParentId" name="RegisterBE.ParentId" placeholder="10位英數字(必填)" type="text" value="" />
+      </div>
+    </div>
+    <div class="item">
+      <label for="RegisterBE_SelectedBank">本人/代領人金融機構代號 <span class="visually-hidden">(限本人同身分證字號之金融機構代號)</span></label>
+      <div>
+        <select id="RegisterBE_SelectedBank" name="RegisterBE.SelectedBank" aria-label="選擇金融機構代號(限本人同身分證字號之金融機構代號)">
+          <option label="選擇金融機構代號" selected="selected" value="">請選擇</option>
+          <option value="004">004臺灣銀行</option>
+          <option value="005">005臺灣土地銀行</option>
+          <option value="006">006合作金庫商業銀行</option>
+          <option value="007">007第一商業銀行</option>
+          <option value="008">008華南商業銀行</option>
+          <option value="009">009彰化商業銀行</option>
+          <option value="011">011上海商業儲蓄銀行</option>
+          <option value="012">012台北富邦商業銀行</option>
+          <option value="013">013國泰世華商業銀行</option>
+          <option value="016">016高雄銀行</option>
+          <option value="017">017兆豐國際商業銀行</option>
+          <option value="018">018全國農業金庫</option>
+        </select>
+        <p class="note" aria-hidden="true">限本人同身分證字號之金融機構代號/帳號</p>
+      </div>
+    </div>
+    <div class="item">
+      <label for="RegisterBE_BankAccount">本人/代領人金融機構帳號</label>
+      <div>
+        <input MaxLength="16" aria-label="本人/代領人金融機構帳號" id="RegisterBE_BankAccount" name="RegisterBE.BankAccount" placeholder="8-16位數字(必填)" type="text" value="" />
+      </div>
+    </div>
+  </fieldset>
+  <fieldset id="childList">
+    <legend class="visually-hidden">發放對象健保卡號</legend>
+
+    <div class="item" id="healtNum">
+      <label for="RegisterBE_HealthId">發放對象健保卡號 <span class="visually-hidden">代領上限為4位(含本人5位)</span></label>
+      <div>
+        <div>
+          <input MaxLength="12" aria-label="發放對象健保卡號#1，代領上限為4位(含本人5位)" id="RegisterBE_HealthId" name="RegisterBE.HealthId" placeholder="12位數字(必填)" type="text" value="" />
+          <button id="removeNum" class="r delete" aria-label="刪除卡號#1">刪除</button>
+        </div>
+      </div>
+    </div>
+    <p class="note mlLabel" aria-hidden="true">代領上限為4位(含本人5位)</p>
+    <button id="addNum" class="g add indent" aria-label="新增">新增</button>
+  </fieldset>
+</div>
+  <div class="btns">
+    <button class="gray" type="button" aria-label="上一頁" onclick="backFunction();">上一頁</button>
+    <button type="button" aria-label="下一頁" onclick="submitFunction();">下一頁</button>
+  </div>
+  </form>
+
+<script src="main.js"></script>
+    </div>
+  </section>
+</main>
+</body>
+</html>
